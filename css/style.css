@@ -1,0 +1,135 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../imagens/Fundo.jpg);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #121214;
+}
+
+main{
+    max-width: 580;
+    width: 90%;
+    margin: auto;
+}
+
+section ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+section ul li{
+    transition: transform .3s;
+}
+
+section ul li:hover{
+    transform: scale(1.1);
+}
+
+body *{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 160%;
+}
+
+section{
+    color: white;
+    background-image: linear-gradient(90deg, #C91842
+    0%,#5CC2E2 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+    margin-top: 32px;
+    margin-bottom: 44px;
+}
+
+section div{
+    background-color: #2A2634;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+
+}
+
+section h2{
+    letter-spacing: -0,47px;
+}
+
+section p{
+    color: #A1A1AA;
+    letter-spacing: -0,18px;
+}
+
+.filmes-list img{
+    border-radius: 8px;
+    width: 100px;
+    height: 150px;
+}
+
+.series-list img{
+    border-radius: 8px;
+    width: 100px;
+    height: 150px;
+}
+
+.fotogithub{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-image: linear-gradient(90deg, #C91842
+    0%,#5CC2E2 100%);
+    padding: 4px;
+    margin-top: 32px;
+    transition: transform .3s;
+    animation: fromTop .7s .2s backwards;
+}
+
+.fotogithub:hover {
+    transform: scale(1.1);
+}
+
+header{
+    text-align: center;
+    height: calc(120px + 32px);
+}
+
+@keyframes fromTop{
+    from{
+        opacity: 0; transform: translateY(-30px);}
+
+    to{opacity: 1; transform: translateY(0)}
+}
+
+@keyframes fromBottom{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main section{
+    animation: fromBottom .7s backwards;
+}
+
+main section:nth-child(1){
+    animation-delay: 0;
+}
+
+main section:nth-child(2){
+    animation-delay: .4s;
+}
+
+main section:nth-child(3){
+    animation-delay: .8s;
+}
